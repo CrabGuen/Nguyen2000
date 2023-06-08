@@ -22,15 +22,15 @@ fun AboutScreen(navController: NavHostController) {
     }
     Column(
         modifier = Modifier
-            .background(color = Color.White)
+            .background(color = Color.LightGray)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Game IQ",
+            text = "Quiz Game",
             fontWeight = FontWeight.Bold,
-            fontSize = 48.sp,
+            fontSize = 36.sp,
             color = Color.Blue
         )
         Spacer(modifier = Modifier.height(16.dp))
@@ -41,8 +41,8 @@ fun AboutScreen(navController: NavHostController) {
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "Developer Mobile App",
-            fontSize = 20.sp,
+            text = "Mobile App Developer",
+            fontSize = 22.sp,
             color = Color.Blue
         )
     }

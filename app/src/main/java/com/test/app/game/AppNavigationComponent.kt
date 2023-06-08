@@ -46,6 +46,9 @@ fun AppNavigationComponent() {
         composable("physics") {
             PhysicsScreen(navController)
         }
+        composable("literature") {
+            LiteratureScreen(navController)
+        }
         composable("showH") {
             ShowAnswersHScreen(navController)
         }
@@ -60,6 +63,9 @@ fun AppNavigationComponent() {
         }
         composable("showP") {
             ShowAnswersPScreen(navController)
+        }
+        composable("showL") {
+            ShowAnswersLScreen(navController)
         }
     }
 }

@@ -63,19 +63,20 @@ fun GeographyScreen(navController: NavHostController) {
     Column(
         modifier = Modifier
             .padding(16.dp)
+            .background(color = Color.LightGray)
             .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         // Title
         Text(
-            text = "QUIZ GAME",
+            text = "Quiz Game",
             fontSize = 40.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Blue
         )
         Spacer(
-            modifier = Modifier.height(64.dp)
+            modifier = Modifier.height(46.dp)
         )
         // Question
         val question = "Question ${index.value}: ${currentQuestion.value?.question}"
@@ -110,12 +111,12 @@ fun GeographyScreen(navController: NavHostController) {
             }
         }
         Spacer(
-            modifier = Modifier.height(28.dp)
+            modifier = Modifier.height(22.dp)
         )
         // Score
         Text(
-            text = "Your score is ${score.value}",
-            fontSize = 32.sp,
+            text = "Your score is ${score.value}/10",
+            fontSize = 26.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Blue
         )
@@ -126,7 +127,7 @@ fun GeographyScreen(navController: NavHostController) {
             Text(
                 text = "Congratulation",
                 fontWeight = FontWeight.Bold,
-                fontSize = 22.sp,
+                fontSize = 32.sp,
                 color = Color.Green
             )
             Spacer(modifier = Modifier.height(2.dp))
@@ -144,15 +145,15 @@ fun GeographyScreen(navController: NavHostController) {
                 Text(
                     text = "Next Field",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 22.sp,
+                    fontSize = 26.sp,
                     color = Color.White
                 )
             }
         } else if (index.value == 11 && score.value <= 9) {
             Text(
-                text = "Mission fail",
+                text = "Mission Fail",
                 fontWeight = FontWeight.Bold,
-                fontSize = 22.sp,
+                fontSize = 32.sp,
                 color = Color.Red
             )
             Box(
@@ -167,9 +168,9 @@ fun GeographyScreen(navController: NavHostController) {
                 contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = "Play again",
+                    text = "Play Again",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 22.sp,
+                    fontSize = 26.sp,
                     color = Color.White
                 )
             }
@@ -199,7 +200,7 @@ fun GeographyScreen(navController: NavHostController) {
                 Text(
                     text = "Show Answers",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 22.sp,
+                    fontSize = 26.sp,
                     color = Color.White
                 )
             }

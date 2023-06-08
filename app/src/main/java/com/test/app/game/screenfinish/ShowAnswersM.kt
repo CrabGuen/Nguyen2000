@@ -23,6 +23,7 @@ fun ShowAnswersMScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .padding(16.dp)
+            .background(color = Color.LightGray)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
@@ -30,13 +31,13 @@ fun ShowAnswersMScreen(navController: NavController) {
         Text(
             text = "Show Answers",
             fontWeight = FontWeight.Bold,
-            fontSize = 22.sp,
+            fontSize = 32.sp,
             color = Color.Blue
         )
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(26.dp))
         Text(
             text = "Next number: 0, 1, 2, 4, 6, 9, 12, 16, ??" +
-                    "-> 0 + (1) = 1; 1 + (1) = 2; 2 + (2) = 4; 4 + (2) = 6",
+                    "\n-> 0 + (1) = 1; 1 + (1) = 2; 2 + (2) = 4; 4 + (2) = 6",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -44,7 +45,7 @@ fun ShowAnswersMScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Sum of: 1..99 = ????" +
-                    "-> (1 + ..n) = (n/2 * n + n/2) -> 1 + ..100 = 5050",
+                    "\n-> (1 + ..n) = (n/2 * n + n/2) -> 1 + ..100 = 5050",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -52,7 +53,7 @@ fun ShowAnswersMScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Next number: 0, 1, 3, 6, 10, ??" +
-                    "-> 0 + (1) = 1; 1 + (2) = 3; 3 + (3) = 6",
+                    "\n-> 0 + (1) = 1; 1 + (2) = 3; 3 + (3) = 6",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -60,7 +61,7 @@ fun ShowAnswersMScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Next number: 19, 28, 37, 46, ??" +
-                    "-> (2 * 9 + 1) = 19; (3 * 9 + 1) = 28",
+                    "\n-> (2 * 9 + 1) = 19; (3 * 9 + 1) = 28",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -68,7 +69,7 @@ fun ShowAnswersMScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Different type: ?" +
-                    "-> Triangle, Rectangle, Pentagon: Shape 2D",
+                    "\n-> Triangle, Rectangle, Pentagon: Shape 2D",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -76,7 +77,7 @@ fun ShowAnswersMScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Next two number: 10, 30, 32, 96, 98, 294, 296, ???, ???" +
-                    "-> 10 * (3) = 30; 30 + (2) = 32; 32 * (3) = 96; 96 + (2) = 98",
+                    "\n-> 10 * (3) = 30; 30 + (2) = 32; 32 * (3) = 96; 96 + (2) = 98",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -84,7 +85,7 @@ fun ShowAnswersMScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Next number: 0, 4, 2, 6, 3, 7, 3.5, ?" +
-                    "-> 0 + (4) = 4; 4 / (2) = 2; 2 + (4) = 6; 6 / (2) = 3",
+                    "\n-> 0 + (4) = 4; 4 / (2) = 2; 2 + (4) = 6; 6 / (2) = 3",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -92,7 +93,7 @@ fun ShowAnswersMScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Choose an integer n so that the expression X has the smallest value?" +
-                    "-> X = 2023 - (2022 - n) = 2023 - (2022 - 1) = 2",
+                    "\n-> X = 2023 - (2022 - n) = 2023 - (2022 - 1) = 2",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -100,7 +101,7 @@ fun ShowAnswersMScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Next number: 191, 382, 573, 764, 955, ??" +
-                    "-> 19 * (1) = 19; 19 * (2) = 38; 19 * (3) = 57",
+                    "\n-> 19 * (1) = 19; 19 * (2) = 38; 19 * (3) = 57",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -108,7 +109,7 @@ fun ShowAnswersMScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Next two number: 0, 3, 1, 4, 2, 5, 3, ?, ?" +
-                    "-> 0 + (3) = 3; 3 - (2) = 1; 1 + (3) = 4; 4 - (2) = 2",
+                    "\n-> 0 + (3) = 3; 3 - (2) = 1; 1 + (3) = 4; 4 - (2) = 2",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -128,7 +129,7 @@ fun ShowAnswersMScreen(navController: NavController) {
             Text(
                 text = "Next Field",
                 fontWeight = FontWeight.Bold,
-                fontSize = 22.sp,
+                fontSize = 26.sp,
                 color = Color.White
             )
         }

@@ -23,6 +23,7 @@ fun ShowAnswersHScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .padding(16.dp)
+            .background(color = Color.LightGray)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
@@ -30,13 +31,13 @@ fun ShowAnswersHScreen(navController: NavController) {
         Text(
             text = "Show Answers",
             fontWeight = FontWeight.Bold,
-            fontSize = 22.sp,
+            fontSize = 32.sp,
             color = Color.Blue
         )
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(26.dp))
         Text(
             text = "Who is the founder and first leader of the Democratic Republic of Vietnam?" +
-                    "-> Ho Chi Minh",
+                    "\n-> Ho Chi Minh",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -44,7 +45,7 @@ fun ShowAnswersHScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "How long did the Vietnam War last?" +
-                    "-> 1955 to 1975",
+                    "\n-> 1955 to 1975",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -52,7 +53,7 @@ fun ShowAnswersHScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Since when is Ha Noi the capital of Viet Nam?" +
-                    "-> Since 1976",
+                    "\n-> Since 1976",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -60,7 +61,7 @@ fun ShowAnswersHScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "6/12/1953, what event happened?" +
-                    "-> Battle of Dien Bien Phu",
+                    "\n-> Battle of Dien Bien Phu",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -68,7 +69,7 @@ fun ShowAnswersHScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Who is the commander of the Dien Bien Phu campaign?" +
-                    "-> Vo Nguyen Giap",
+                    "\n-> Vo Nguyen Giap",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -76,7 +77,7 @@ fun ShowAnswersHScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Who planted the flag on the roof of the Dinh Doc Lap?" +
-                    "-> Bui Quang Than",
+                    "\n-> Bui Quang Than",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -84,7 +85,7 @@ fun ShowAnswersHScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Who wrote Vietnam's first declaration of independence?" +
-                    "-> Ly Thuong Kiet",
+                    "\n-> Ly Thuong Kiet",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -92,7 +93,7 @@ fun ShowAnswersHScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "Who wrote Binh Ngo Dai Cao?" +
-                    "-> Nguyen Trai",
+                    "\n-> Nguyen Trai",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -100,7 +101,7 @@ fun ShowAnswersHScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "How many declarations of independence does Vietnam have?" +
-                    "-> 3",
+                    "\n-> 3",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -108,7 +109,7 @@ fun ShowAnswersHScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(2.dp))
         Text(
             text = "When was President Ho Chi Minh born?" +
-                    "-> 19/5/1890",
+                    "\n-> 19/5/1890",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
@@ -128,7 +129,7 @@ fun ShowAnswersHScreen(navController: NavController) {
             Text(
                 text = "Next Field",
                 fontWeight = FontWeight.Bold,
-                fontSize = 22.sp,
+                fontSize = 26.sp,
                 color = Color.White
             )
         }

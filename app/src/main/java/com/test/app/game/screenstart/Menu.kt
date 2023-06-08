@@ -39,6 +39,7 @@ fun MenuScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(color = Color.LightGray)
             .padding(16.dp),
         verticalArrangement = Arrangement.Center
     ) {
@@ -54,7 +55,7 @@ fun MenuScreen(navController: NavController) {
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "PLAY GAME",
+                text = "Play Game",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
@@ -73,7 +74,7 @@ fun MenuScreen(navController: NavController) {
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "OPTIONS",
+                text = "Options",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
@@ -92,7 +93,7 @@ fun MenuScreen(navController: NavController) {
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "ABOUT",
+                text = "About",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
@@ -111,7 +112,7 @@ fun MenuScreen(navController: NavController) {
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "EXIT",
+                text = "Exit",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,

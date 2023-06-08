@@ -33,7 +33,7 @@ fun SplashScreen(navController: NavController) {
     ) {
         Spacer(modifier = Modifier.height(16.dp))
         Text(
-            text = "Quiz Game IQ",
+            text = "Quiz Game",
             fontSize = 40.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Blue

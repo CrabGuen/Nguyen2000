@@ -26,6 +26,7 @@ fun ChooseFieldScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .padding(16.dp)
+            .background(color = Color.LightGray)
             .fillMaxSize(),
         verticalArrangement = Arrangement.Center
     ) {
@@ -80,6 +81,25 @@ fun ChooseFieldScreen(navController: NavController) {
         ) {
             Text(
                 text = "Geography",
+                fontWeight = FontWeight.Bold,
+                fontSize = 22.sp,
+                color = Color.Blue
+            )
+        }
+        Spacer(modifier = Modifier.height(6.dp))
+        Box(
+            modifier = Modifier
+                .background(color = Color.Green, shape = RoundedCornerShape(100))
+                .padding(8.dp)
+                .fillMaxWidth()
+                .height(56.dp)
+                .clickable(interactionSource = interactionSource, indication = null) {
+                    navController.navigate("literature")
+                },
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = "Literature",
                 fontWeight = FontWeight.Bold,
                 fontSize = 22.sp,
                 color = Color.Blue

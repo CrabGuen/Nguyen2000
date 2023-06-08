@@ -17,19 +17,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
-import com.test.app.game.datalist.QuestionC
-import com.test.app.game.datalist.questionListC
+import androidx.navigation.NavHostController
+import com.test.app.game.datalist.QuestionL
+import com.test.app.game.datalist.questionListL
 
 @Composable
-fun ChemistryScreen(navController: NavController) {
+fun LiteratureScreen(navController: NavHostController) {
 
     BackHandler {
         navController.navigate("field")
     }
 
     val randomQuestions = remember {
-        mutableStateOf(getRandomUniqueQuestions(questionListC))
+        mutableStateOf(getRandomUniqueQuestions(questionListL))
     }
 
     val index = remember {
@@ -160,7 +160,7 @@ fun ChemistryScreen(navController: NavController) {
             Box(
                 modifier = Modifier
                     .clickable(interactionSource = interactionSource, indication = null) {
-                        navController.navigate("chemistry")
+                        navController.navigate("literature")
                     }
                     .padding(8.dp)
                     .fillMaxWidth()
@@ -194,7 +194,7 @@ fun ChemistryScreen(navController: NavController) {
                     .fillMaxWidth()
                     .height(56.dp)
                     .clickable(interactionSource = interactionSource, indication = null) {
-                        navController.navigate("showC")
+                        navController.navigate("showL")
                     },
                 contentAlignment = Alignment.Center
             ) {
@@ -216,7 +216,7 @@ fun ChemistryScreen(navController: NavController) {
     }
 }
 
-fun getRandomUniqueQuestions(questionList: List<QuestionC>): List<QuestionC>? {
+fun getRandomUniqueQuestions(questionList: List<QuestionL>): List<QuestionL>? {
     if (questionList.isEmpty()) return null
 
     val randomQuestion = questionList.subList(0, 10).shuffled()

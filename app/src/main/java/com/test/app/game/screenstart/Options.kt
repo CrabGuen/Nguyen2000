@@ -21,7 +21,7 @@ fun OptionsScreen(navController: NavController) {
 
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colors.background,
+        color = Color.LightGray
     ) {
         Column {
             Text(

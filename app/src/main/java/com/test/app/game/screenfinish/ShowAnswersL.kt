@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
 @Composable
-fun ShowAnswersGScreen(navController: NavController) {
+fun ShowAnswersLScreen(navController: NavController) {
     val interactionSource = remember { MutableInteractionSource() }
 
     Column(
@@ -36,80 +36,80 @@ fun ShowAnswersGScreen(navController: NavController) {
         )
         Spacer(modifier = Modifier.height(26.dp))
         Text(
-            text = "What is the longest river in Vietnam?" +
-                    "\n-> Dong Nai River",
+            text = "The text is considered the first work about Hanoi?" +
+                    "\n-> Chieu Doi Do",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
         )
         Spacer(modifier = Modifier.height(2.dp))
         Text(
-            text = "How many provinces and cities are there in Vietnam?" +
-                    "\n-> 63",
+            text = "Who wrote the first encyclopedia?" +
+                    "\n-> Le Quy Don",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
         )
         Spacer(modifier = Modifier.height(2.dp))
         Text(
-            text = "Where is Vung Tau located?" +
-                    "\n-> Dong Nam Bo",
+            text = "What is Thuy Kieu last name?" +
+                    "\n-> Vuong",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
         )
         Spacer(modifier = Modifier.height(2.dp))
         Text(
-            text = "Where is the 17th parallel?" +
-                    "\n-> Quang Tri",
+            text = "What kind of typeface is Truyen Kieu written in?" +
+                    "\n-> Nom",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
         )
         Spacer(modifier = Modifier.height(2.dp))
         Text(
-            text = "Which province does the Truong Sa archipelago belong to?" +
-                    "\n-> Khanh Hoa",
+            text = "What was the first book Nguyen Trai wrote?" +
+                    "\n-> Du Dia Chi",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
         )
         Spacer(modifier = Modifier.height(2.dp))
         Text(
-            text = "What is the highest mountain in Vietnam?" +
-                    "\n-> Fansipan Mountain",
+            text = "Who is the originator of the Tao Dan association?" +
+                    "\n-> Tan Da",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
         )
         Spacer(modifier = Modifier.height(2.dp))
         Text(
-            text = "Vietnam's largest cave?" +
-                    "\n-> Son Doong",
+            text = "Nguyen Sen is the real name of which writer?" +
+                    "\n-> To Hoai",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
         )
         Spacer(modifier = Modifier.height(2.dp))
         Text(
-            text = "Vietnam's largest city?" +
-                    "\n-> TPHCM",
+            text = "Huong Son Cu Si is nickname of which writer?" +
+                    "\n-> Bach Cu Di",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
         )
         Spacer(modifier = Modifier.height(2.dp))
         Text(
-            text = "How many natural heritages does Vietnam have recognized by UNESCO?" +
-                    "\n-> 2 : Phong Nha Cave, Ha Long Bay",
+            text = "What country is the king of fairy tales Andersen from?" +
+                    "\n-> Dan Mach",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
         )
         Spacer(modifier = Modifier.height(2.dp))
         Text(
-            text = "Today's Cuu Long River has several gates leading to the sea?" +
-                    "\n-> 7 : Ba Lai, Ba Thac (Bassac)",
+            text = "When was the poem Luom written?" +
+                    "\n-> Since 1949",
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Color.Black
