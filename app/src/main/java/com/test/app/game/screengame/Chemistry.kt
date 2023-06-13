@@ -64,7 +64,6 @@ fun ChemistryScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .padding(16.dp)
-            .background(color = Color.LightGray)
             .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally

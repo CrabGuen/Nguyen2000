@@ -6,7 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.navigation.NavHostController
 import com.test.app.game.datalist.Question
-import com.test.app.game.datalist.questionList
+import com.test.app.game.datalist.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
@@ -26,6 +26,16 @@ fun MathIQScreen(navController: NavHostController) {
     BackHandler {
         navController.navigate("field")
     }
+
+//    val randomQuestion = when(catalory) {
+//        Catalory.MATH -> getRandomUniqueQuestions(questionList)
+//        Catalory.HISTORY -> getRandomUniqueQuestions(questionListH)
+//        Catalory.GEOGRAPHY -> getRandomUniqueQuestions(questionListG)
+//        Catalory.CHEMISTRY -> getRandomUniqueQuestions(questionListC)
+//        Catalory.PHYSICS -> getRandomUniqueQuestions(questionListP)
+//        Catalory.LITERATURE -> getRandomUniqueQuestions(questionListL)
+//        else -> getRandomUniqueQuestions(questionList)
+//    }
 
     val randomQuestions = remember {
         mutableStateOf(getRandomUniqueQuestions(questionList))
@@ -63,7 +73,6 @@ fun MathIQScreen(navController: NavHostController) {
     Column(
         modifier = Modifier
             .padding(16.dp)
-            .background(color = Color.LightGray)
             .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally

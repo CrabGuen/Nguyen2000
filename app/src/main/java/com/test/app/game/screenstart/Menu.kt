@@ -39,7 +39,6 @@ fun MenuScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color.LightGray)
             .padding(16.dp),
         verticalArrangement = Arrangement.Center
     ) {
