@@ -4,13 +4,12 @@ import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.navigation.NavHostController
-import com.test.app.game.datalist.Question
-import com.test.app.game.datalist.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -18,27 +17,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-// import kotlinx.coroutines.delay
+import androidx.navigation.NavController
 
 @Composable
-fun MathIQScreen(navController: NavHostController) {
+fun GameScreen(navController: NavController, category: String) {
 
     BackHandler {
-        navController.navigate("field")
+        navController.popBackStack()
     }
 
-//    val randomQuestion = when(catalory) {
-//        Catalory.MATH -> getRandomUniqueQuestions(questionList)
-//        Catalory.HISTORY -> getRandomUniqueQuestions(questionListH)
-//        Catalory.GEOGRAPHY -> getRandomUniqueQuestions(questionListG)
-//        Catalory.CHEMISTRY -> getRandomUniqueQuestions(questionListC)
-//        Catalory.PHYSICS -> getRandomUniqueQuestions(questionListP)
-//        Catalory.LITERATURE -> getRandomUniqueQuestions(questionListL)
-//        else -> getRandomUniqueQuestions(questionList)
-//    }
-
     val randomQuestions = remember {
-        mutableStateOf(getRandomUniqueQuestions(questionList))
+        mutableStateOf(getRandomUniqueQuestions(category))
     }
 
     val index = remember {
@@ -168,7 +157,7 @@ fun MathIQScreen(navController: NavHostController) {
             Box(
                 modifier = Modifier
                     .clickable(interactionSource = interactionSource, indication = null) {
-                        navController.navigate("math")
+                        navController.navigate("chemistry")
                     }
                     .padding(8.dp)
                     .fillMaxWidth()
@@ -202,7 +191,7 @@ fun MathIQScreen(navController: NavHostController) {
                     .fillMaxWidth()
                     .height(56.dp)
                     .clickable(interactionSource = interactionSource, indication = null) {
-                        navController.navigate("showM")
+                        navController.navigate("showC")
                     },
                 contentAlignment = Alignment.Center
             ) {
@@ -222,12 +211,4 @@ fun MathIQScreen(navController: NavHostController) {
             )
         }
     }
-}
-
-fun getRandomUniqueQuestions(questionList: List<Question>): List<Question>? {
-    if (questionList.isEmpty()) return null
-
-    val randomQuestion = questionList.subList(0, 10).shuffled()
-    val lastQuestion = questionList.last()
-    return randomQuestion + lastQuestion
 }

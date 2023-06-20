@@ -16,13 +16,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.test.app.game.datalist.Category
 
 @Composable
 fun ChooseFieldScreen(navController: NavController) {
+
     val interactionSource = remember { MutableInteractionSource() }
+
     BackHandler {
         navController.navigate("menu")
     }
+
     Column(
         modifier = Modifier
             .padding(16.dp)
@@ -36,7 +40,7 @@ fun ChooseFieldScreen(navController: NavController) {
                 .fillMaxWidth()
                 .height(56.dp)
                 .clickable(interactionSource = interactionSource, indication = null) {
-                    navController.navigate("math")
+                    navController.navigate("game/${Category.MATH}")
                 },
             contentAlignment = Alignment.Center
         ) {
@@ -55,7 +59,7 @@ fun ChooseFieldScreen(navController: NavController) {
                 .fillMaxWidth()
                 .height(56.dp)
                 .clickable(interactionSource = interactionSource, indication = null) {
-                    navController.navigate("history")
+                    navController.navigate("game/${Category.HISTORY}")
                 },
             contentAlignment = Alignment.Center
         ) {
@@ -74,7 +78,7 @@ fun ChooseFieldScreen(navController: NavController) {
                 .fillMaxWidth()
                 .height(56.dp)
                 .clickable(interactionSource = interactionSource, indication = null) {
-                    navController.navigate("geography")
+                    navController.navigate("game/${Category.GEOGRAPHY}")
                 },
             contentAlignment = Alignment.Center
         ) {
@@ -93,7 +97,7 @@ fun ChooseFieldScreen(navController: NavController) {
                 .fillMaxWidth()
                 .height(56.dp)
                 .clickable(interactionSource = interactionSource, indication = null) {
-                    navController.navigate("literature")
+                    navController.navigate("game/${Category.LITERATURE}")
                 },
             contentAlignment = Alignment.Center
         ) {
@@ -112,7 +116,7 @@ fun ChooseFieldScreen(navController: NavController) {
                 .fillMaxWidth()
                 .height(56.dp)
                 .clickable(interactionSource = interactionSource, indication = null) {
-                    navController.navigate("physics")
+                    navController.navigate("game/${Category.PHYSICS}")
                 },
             contentAlignment = Alignment.Center
         ) {
@@ -131,7 +135,7 @@ fun ChooseFieldScreen(navController: NavController) {
                 .fillMaxWidth()
                 .height(56.dp)
                 .clickable(interactionSource = interactionSource, indication = null) {
-                    navController.navigate("chemistry")
+                    navController.navigate("game/${Category.CHEMISTRY}")
                 },
             contentAlignment = Alignment.Center
         ) {

@@ -4,6 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.test.app.game.datalist.CATEGORY
+import com.test.app.game.datalist.Category
 import com.test.app.game.screenfinish.*
 import com.test.app.game.screengame.*
 import com.test.app.game.screenstart.*
@@ -22,32 +24,18 @@ fun AppNavigationComponent() {
         composable("menu") {
             MenuScreen(navController)
         }
-        composable("math") {
-            MathIQScreen(navController)
-        }
         composable("options") {
             OptionsScreen(navController)
         }
         composable("about") {
             AboutScreen(navController)
         }
-        composable("history") {
-            HistoryScreen(navController)
+        composable("game/{$CATEGORY}") {
+            val category: String = it.arguments?.getString(CATEGORY) ?: Category.MATH
+            GameScreen(navController, category)
         }
         composable("field") {
             ChooseFieldScreen(navController)
-        }
-        composable("geography") {
-            GeographyScreen(navController)
-        }
-        composable("chemistry") {
-            ChemistryScreen(navController)
-        }
-        composable("physics") {
-            PhysicsScreen(navController)
-        }
-        composable("literature") {
-            LiteratureScreen(navController)
         }
         composable("showH") {
             ShowAnswersHScreen(navController)

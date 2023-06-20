@@ -1,11 +1,6 @@
 package com.test.app.game.datalist
 
-data class Question(
-    val question: String,
-    val options: List<String>,
-    val answer: Int
-)
-val questionList = listOf(
+val questionListM = listOf(
     Question(
         "Next number: 0, 1, 2, 4, 6, 9, 12, 16, ??",
         listOf("20", "18", "32", "40"), 0
