@@ -18,6 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.test.app.game.datalist.CATEGORY
 import com.test.app.game.datalist.Category
 import com.test.app.game.datalist.getRandomUniqueQuestions
 
@@ -159,7 +160,7 @@ fun GameScreen(navController: NavController, category: String) {
             Box(
                 modifier = Modifier
                     .clickable(interactionSource = interactionSource, indication = null) {
-                        navController.navigate("chemistry")
+                        navController.navigate("game/$category")
                     }
                     .padding(8.dp)
                     .fillMaxWidth()
