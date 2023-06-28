@@ -10,3 +10,4 @@ object Category {
 }
 
 const val CATEGORY = "CATEGORY"
+const val SCORE = "SCORE"

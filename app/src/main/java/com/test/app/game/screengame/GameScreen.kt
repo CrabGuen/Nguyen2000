@@ -18,6 +18,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.test.app.game.datalist.Category
+import com.test.app.game.datalist.getRandomUniqueQuestions
 
 @Composable
 fun GameScreen(navController: NavController, category: String) {
@@ -123,7 +125,7 @@ fun GameScreen(navController: NavController, category: String) {
         )
         if (score.value == 10 && index.value == 11) {
             Text(
-                text = "Congratulation",
+                text = "Congratulations",
                 fontWeight = FontWeight.Bold,
                 fontSize = 32.sp,
                 color = Color.Green
@@ -191,7 +193,14 @@ fun GameScreen(navController: NavController, category: String) {
                     .fillMaxWidth()
                     .height(56.dp)
                     .clickable(interactionSource = interactionSource, indication = null) {
-                        navController.navigate("showC")
+                        when (category) {
+                            Category.MATH -> navController.navigate("showM/${score.value}")
+                            Category.HISTORY -> navController.navigate("showH/${score.value}")
+                            Category.GEOGRAPHY -> navController.navigate("showG/${score.value}")
+                            Category.CHEMISTRY -> navController.navigate("showC/${score.value}")
+                            Category.PHYSICS -> navController.navigate("showP/${score.value}")
+                            Category.LITERATURE -> navController.navigate("showL/${score.value}")
+                        }
                     },
                 contentAlignment = Alignment.Center
             ) {

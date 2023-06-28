@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
 @Composable
-fun ShowAnswersCScreen(navController: NavController) {
+fun ShowAnswersCScreen(navController: NavController, score: Int) {
     val interactionSource = remember { MutableInteractionSource() }
 
     Column(
@@ -28,6 +28,13 @@ fun ShowAnswersCScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
+        Text(
+            text = "Your score is $score/10",
+            fontWeight = FontWeight.Bold,
+            fontSize = 32.sp,
+            color = Color.Blue
+        )
+        Spacer(modifier = Modifier.height(16.dp))
         Text(
             text = "Show Answers",
             fontWeight = FontWeight.Bold,

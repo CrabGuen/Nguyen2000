@@ -1,6 +1,4 @@
-package com.test.app.game.screengame
-
-import com.test.app.game.datalist.*
+package com.test.app.game.datalist
 
 fun getRandomUniqueQuestions(category: String): List<Question>? {
 
